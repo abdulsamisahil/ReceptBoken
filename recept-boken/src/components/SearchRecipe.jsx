@@ -1,4 +1,25 @@
-const SearchRecipe = () => {
+import React, { useEffect, useState, useRef } from 'react';
+
+const SearchRecipe = (props) => {
+  const inputRef = useRef();
+
+
+  const search = (event) => {
+    if (event.keyCode === 13) {
+      fetchRecipes();
+    }
+  }
+
+  const fetchRecipes = () => {
+    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputRef.current.value}`)
+      .then((res) => res.json())
+      .then((data) => {
+        props.setMeals(data.meals);
+      })
+
+  }
+
+
   return (
     <>
       <section className='bg-primary text-light p-4'>
@@ -10,8 +31,10 @@ const SearchRecipe = () => {
                 type='text'
                 className='form-control w-25'
                 placeholder='Ange mat här...'
+                ref={inputRef}
+                onKeyUp={search}
               />
-              <button className='btn btn-dark btn-lg' type='button'>
+              <button className='btn btn-dark btn-lg' type='button' onClick={() => { fetchRecipes() }}>
                 Sök
               </button>
             </div>
