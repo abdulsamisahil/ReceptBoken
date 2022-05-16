@@ -10,6 +10,8 @@ const FoodItem = (props) => {
 
               {
 
+
+                props.meals == null ? <p>No recipes found.</p> :
                 props.meals.map((meal) => {
                   return (
                     <div className='col-md'>
