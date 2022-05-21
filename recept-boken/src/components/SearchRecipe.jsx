@@ -1,28 +1,16 @@
-import React, { useEffect, useState, useRef } from 'react';
-
-const SearchRecipe = (props) => {
-  const inputRef = useRef();
-
-
-  const search = (event) => {
-    if (event.keyCode === 13) {
-      fetchRecipes();
+const SearchRecipe = ({ setSearch, requestApi, value }) => {
+  const handleSearch = () => {
+    if (value !== '') {
+      requestApi()
+      setSearch('')
+    } else {
+      alert('Vänligen mata in matnamn')
+      return
     }
   }
-
-  const fetchRecipes = () => {
-    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputRef.current.value}`)
-      .then((res) => res.json())
-      .then((data) => {
-        props.setMeals(data.meals);
-      })
-
-  }
-
-
   return (
     <>
-      <section className='bg-primary text-light p-4'>
+      <section className='text-dark p-4'>
         <div className='container'>
           <div className='d-md-flex align-items-center justify-content-between'>
             <h3 className='mb-3 mb-md-0'>Sök för recept</h3>
@@ -31,12 +19,17 @@ const SearchRecipe = (props) => {
                 type='text'
                 className='form-control w-25'
                 placeholder='Ange mat här...'
-                ref={inputRef}
-                onKeyUp={search}
+                value={value}
+                onChange={(e) => {
+                  setSearch(e.target.value)
+                }}
               />
-              <button className='btn btn-dark btn-lg' type='button' onClick={() => { fetchRecipes() }}>
-                Sök
-              </button>
+              <input
+                className='btn btn-dark btn-lg'
+                type='button'
+                value='Sök'
+                onClick={handleSearch}
+              />
             </div>
           </div>
         </div>
