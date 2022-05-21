@@ -17,6 +17,7 @@ const App = () => {
     console.log('parent', searchValue)
   }
 
+  /* In this method the user will redirected to the food item page specifically */
   const onFoodClicked = () => {
     alert('Food clicked')
   }
