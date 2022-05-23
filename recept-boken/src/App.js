@@ -14,7 +14,6 @@ const App = () => {
   const getRecipes = async () => {
     const response = await getFood(searchValue)
     setMeals(response)
-    console.log('parent', searchValue)
   }
 
   /* In this method the user will redirected to the food item page specifically */
