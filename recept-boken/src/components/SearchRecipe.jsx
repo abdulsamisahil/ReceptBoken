@@ -1,5 +1,13 @@
-const SearchRecipe = ({ setSearch, requestApi, value }) => {
+
+const SearchRecipe = ({ setSearch, requestApi, value, meals }) => {
+
   const handleSearch = () => {
+
+   /*  if (meals.length === 0) {
+      return (
+        <div className="container">Ingen recept hittades...</div>
+      )  
+    } */
     if (value !== '') {
       requestApi()
       setSearch('')

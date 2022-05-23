@@ -20,7 +20,12 @@ const Header = () => {
             <ul className='navbar-nav ms-auto'>
               <li className='nav-item'>
                 <Link to='/' className='nav-link'>
-                  Hemsida
+                  Sök Mat
+                </Link>
+              </li>
+              <li className='nav-item'>
+                <Link to='/my-favorites' className='nav-link'>
+                  Min Favoritmat
                 </Link>
               </li>
               <li className='nav-item'>
@@ -29,8 +34,8 @@ const Header = () => {
                 </Link>
               </li>
               <li className='nav-item'>
-                <Link to='/my-favorites' className='nav-link'>
-                  Min favoritmat
+                <Link to='/about' className='nav-link'>
+                  Om
                 </Link>
               </li>
             </ul>

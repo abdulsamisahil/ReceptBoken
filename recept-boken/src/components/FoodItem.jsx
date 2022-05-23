@@ -12,11 +12,11 @@ const FoodItem = ({ meal, foodClicked }) => {
           <h5 className='card-title'>{meal.strMeal}</h5>
           <p className='card-text'>{meal.strInstructions}</p>
           <Link
-            to='#tothismealdetailpageprop'
+            to='/food-item'
             className='btn btn-primary'
             onClick={foodClicked}
           >
-            Gå till maten på detalj
+            Läs mer om maten
           </Link>
         </div>
       </div>
