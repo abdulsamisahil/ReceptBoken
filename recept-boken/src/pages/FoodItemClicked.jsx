@@ -1,8 +1,10 @@
-const FoodItemClicked = () => {
+import FoodItemDetails from '../components/FoodItemDetails'
+
+const FoodItemClicked = ({meal}) => {
 
     return (
         <div className="container" >
-            Food Item Clicked Page
+            <FoodItemDetails meal={meal}/>
         </div>
     )
 }

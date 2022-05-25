@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 
 const FoodItem = ({ meal, foodClicked }) => {
+
   return (
       <div className='card mb-2'>
         <img
@@ -14,8 +15,10 @@ const FoodItem = ({ meal, foodClicked }) => {
           <Link
             to='/food-item'
             className='btn btn-primary'
-            onClick={foodClicked}
-          >
+            onClick={() => {
+              foodClicked(meal.idMeal)
+            }}
+           >
             Läs mer om maten
           </Link>
         </div>

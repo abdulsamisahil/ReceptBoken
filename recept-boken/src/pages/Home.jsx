@@ -8,7 +8,7 @@ import FoodList from '../components/FoodList'
 /* APIs */
 import { getFood } from '../API/getFood'
 
-const Home = () => {
+const Home = (/* {setMealId} */) => {
 
     const [meals, setMeals] = useState([])
     const [searchValue, setSearchValue] = useState('')
@@ -21,7 +21,14 @@ const Home = () => {
     }
   
     /* In this method the user will redirected to the food item page specifically */
-    const onFoodClicked = () => {
+    const onFoodClicked = (itemId) => {
+
+        /* setMealId(itemId) */
+        console.log(itemId)
+
+        /* meals.map(meal => {
+            console.log(meal)
+        }) */
     }
 
     return (
