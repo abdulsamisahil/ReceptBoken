@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <div className='container'>
-      Gå till om sida! Där kan du läsa allt om recept boken
+      Gå till kontakt sida! Där kan du läsa allt om recept boken
     </div>
   )
 }
