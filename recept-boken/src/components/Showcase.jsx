@@ -1,5 +1,4 @@
 const Showcase = () => {
-  
   return (
     <>
       <section className='bg-light text-dark p-5 p-lg-0 pt-lg-5 text-center text-sm-center'>
@@ -22,7 +21,7 @@ const Showcase = () => {
                 </a>
               </button>
             </div>
-   
+
             {/* <img
               className='img-fluid w-50 d-none d-sm-block'
               src='/showcase.png'

@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import React, { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 /* Components */
 import Footer from './components/Footer'
@@ -13,8 +13,7 @@ import Contact from './pages/Contact'
 import About from './pages/About'
 
 const App = () => {
-
-/*   const [mealId, setMealId] = useState(0)
+  const [mealItem, setMealItem] = useState({})
 
   //console.log(mealsDetail) */
 
@@ -24,11 +23,14 @@ const App = () => {
         {/* Bring Routes and Route that will be later used to route contact and my favorite meals pages next time */}
         <Header />
         <Routes>
-          <Route path='/' element={<Home /* setMealDetails={setMealId} */ />} />
+          <Route path='/' element={<Home setMealItem={setMealItem} />} />
           <Route path='/my-favorites' element={<MyFavorites />} />
-          <Route path='/food-item' element={<FoodItemClicked /* meal={mealId} */ />} />
+          <Route
+            path='/food-item'
+            element={<FoodItemClicked mealItem={mealItem} />}
+          />
           <Route path='/contact' element={<Contact />} />
-          <Route path='/about' element={<About />} /> 
+          <Route path='/about' element={<About />} />
         </Routes>
         <Footer />
       </Router>
