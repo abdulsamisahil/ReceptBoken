@@ -11,13 +11,12 @@ const FavoriteFoodList = ({ favoriteMeals, foodRemove, foodClicked }) => {
         {
           <>
             {favoriteMeals.map((mealItem) => (
-              <div key={mealItem.idMeal}>
-                <FavoriteFoodItem
-                  meal={mealItem.meal}
-                  foodClicked={foodClicked}
-                  removeFavorite={removeFavorite}
-                />
-              </div>
+              <FavoriteFoodItem
+                key={mealItem.idMeal}
+                meal={mealItem.meal}
+                foodClicked={foodClicked}
+                removeFavorite={removeFavorite}
+              />
             ))}
           </>
         }

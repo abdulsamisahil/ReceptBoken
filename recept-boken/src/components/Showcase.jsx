@@ -7,7 +7,7 @@ const Showcase = () => {
             <div>
               <h1>
                 Välkommen till
-                <span className='text-info'> Recept Boken</span>
+                <span className='text-warning'> Recept Boken</span>
               </h1>
               <p className='lead my-4'>
                 Välkommen till recept boken: En websida som hjälper dig att
@@ -15,8 +15,11 @@ const Showcase = () => {
                 Recepten hämtar vi för dig genom ett API anrop till themealdb
               </p>
 
-              <button className='btn btn-info bg-lg mb-3'>
-                <a href='https://themealdb.com' className='link-light'>
+              <button className='btn btn-warning bg-lg mb-3'>
+                <a
+                  href='https://themealdb.com'
+                  className='link-light text-dark'
+                >
                   Läs mer om themealdb.com
                 </a>
               </button>

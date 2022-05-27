@@ -15,7 +15,7 @@ const FavoriteFoodItem = ({ meal, foodClicked, removeFavorite }) => {
         </p>
         <Link
           to='/food-item'
-          className='btn btn-info'
+          className='btn btn-warning'
           onClick={() => {
             foodClicked(meal)
           }}

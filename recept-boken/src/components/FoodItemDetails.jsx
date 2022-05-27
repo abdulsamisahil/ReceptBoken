@@ -9,23 +9,22 @@ const FoodItemDetails = ({ meal }) => {
 
   console.log(link)
 
-
   const clickHandler = () => {
-    let favoriteMeals = JSON.parse(localStorage.getItem("favorites"))
+    let favoriteMeals = JSON.parse(localStorage.getItem('favorites'))
     console.log(meal)
 
     if (favoriteMeals == null) {
       favoriteMeals = []
     }
 
-    if (!favoriteMeals.some(m => m.meal.idMeal === meal.idMeal)) {
+    if (!favoriteMeals.some((m) => m.meal.idMeal === meal.idMeal)) {
       favoriteMeals.push({
-        meal
+        meal,
       })
-      localStorage.setItem("favorites", JSON.stringify(favoriteMeals))
-      alert(meal.strMeal + " lades till dina favoritmåltid!")
+      localStorage.setItem('favorites', JSON.stringify(favoriteMeals))
+      alert(meal.strMeal + ' lades till dina favoritmåltid!')
     } else {
-      alert("Denna recept finns redan bland dina favoritmåltid!")
+      alert('Denna recept finns redan bland dina favoritmåltid!')
     }
   }
 
@@ -39,7 +38,7 @@ const FoodItemDetails = ({ meal }) => {
               <p className='lead my-4'>{meal.strInstructions}</p>
               <button
                 onClick={clickHandler}
-                className='btn btn-info form-control p-3'
+                className='btn btn-warning form-control p-3'
               >
                 Favorit ?
               </button>

@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom'
 
 const Contact = () => {
   return (
-    <div class='container mt-5'>
-      <div class='row'>
+    <div className='container mt-5'>
+      <div className='row'>
         <div className='col-sm-4'>
-          <h2>Recept Boken</h2>
-          <p>Denna är anpassar sig till alla enheter</p>
+          <h2 className='text-warning'>Recept Boken</h2>
+          <p>Denna applikation anpassar sig till alla enheter</p>
           <h3 className='mt-4'>Sidor</h3>
           <p>Recept-bokens olika sidor</p>
           <ul className='nav nav-pills flex-column'>
