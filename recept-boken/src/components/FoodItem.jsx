@@ -15,7 +15,7 @@ const FoodItem = ({ meal, foodClicked }) => {
         </p>
         <Link
           to='/food-item'
-          className='btn btn-primary'
+          className='btn btn-info'
           onClick={() => {
             foodClicked(meal)
           }}
