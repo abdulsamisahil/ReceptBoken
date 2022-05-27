@@ -24,7 +24,7 @@ const App = () => {
         <Header />
         <Routes>
           <Route path='/' element={<Home setMealItem={setMealItem} />} />
-          <Route path='/my-favorites' element={<MyFavorites />} />
+          <Route path='/my-favorites' element={<MyFavorites setMealItem={setMealItem}/>} />
           <Route
             path='/food-item'
             element={<FoodItemClicked mealItem={mealItem} />}

@@ -9,11 +9,26 @@ const FoodItemDetails = ({ meal }) => {
 
   console.log(link)
 
+
   const clickHandler = () => {
-    //TODO: user clicking the button will save the current meal object with some attributes to localstorage
-    // And in Min Favoritmat page, a foodlist component will be loaded with grabbing all the
-    // food objects from localstorage
+    let favoriteMeals = JSON.parse(localStorage.getItem("favorites"))
+    console.log(meal)
+
+    if (favoriteMeals == null) {
+      favoriteMeals = []
+    }
+
+    if (!favoriteMeals.some(m => m.meal.idMeal === meal.idMeal)) {
+      favoriteMeals.push({
+        meal
+      })
+      localStorage.setItem("favorites", JSON.stringify(favoriteMeals))
+      alert(meal.strMeal + " lades till dina favoritmåltid!")
+    } else {
+      alert("Denna recept finns redan bland dina favoritmåltid!")
+    }
   }
+
   return (
     <div>
       <section className='bg-light text-dark p-5 p-lg-0 pt-lg-5 text-center text-sm-center'>
