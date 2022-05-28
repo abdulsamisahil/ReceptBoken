@@ -7,10 +7,10 @@ const Showcase = () => {
             <div>
               <h1>
                 Välkommen till
-                <span className='text-warning'> Recept Boken</span>
+                <span className='text-warning'> ReceptBoken</span>
               </h1>
               <p className='lead my-4'>
-                Välkommen till recept boken: En websida som hjälper dig att
+                Välkommen till receptboken: En websida som hjälper dig att
                 smaka på den utsökta maten genom att ta upp de berömda recepten.
                 Recepten hämtar vi för dig genom ett API anrop till themealdb
               </p>

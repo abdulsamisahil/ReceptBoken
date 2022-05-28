@@ -6,7 +6,7 @@ const Header = () => {
       <nav className='navbar navbar-expand-lg bg-dark navbar-dark py-3'>
         <div className='container'>
           <Link to='/' className='navbar-brand'>
-            Recept Boken
+            ReceptBoken
           </Link>
           <button
             className='navbar-toggler'
