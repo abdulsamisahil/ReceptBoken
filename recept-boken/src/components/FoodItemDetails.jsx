@@ -1,4 +1,9 @@
+import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+
 const FoodItemDetails = ({ meal }) => {
+  const navigate = useNavigate()
+
   if (!meal.hasOwnProperty('idMeal')) {
     return <div>Ingen mat hittades...</div>
   }
@@ -7,11 +12,9 @@ const FoodItemDetails = ({ meal }) => {
 
   let videoLink = `https://www.youtube.com/embed/${vidId}?rel=0`
 
-  console.log(link)
 
   const clickHandler = () => {
     let favoriteMeals = JSON.parse(localStorage.getItem('favorites'))
-    console.log(meal)
 
     if (favoriteMeals == null) {
       favoriteMeals = []
@@ -24,7 +27,7 @@ const FoodItemDetails = ({ meal }) => {
       localStorage.setItem('favorites', JSON.stringify(favoriteMeals))
       alert(meal.strMeal + ' lades till dina favoritmåltid!')
     } else {
-      alert('Denna recept finns redan bland dina favoritmåltid!')
+      navigate('/my-favorites')
     }
   }
 
