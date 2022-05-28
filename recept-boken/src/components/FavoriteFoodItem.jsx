@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 const FavoriteFoodItem = ({ meal, foodClicked, removeFavorite }) => {
   return (
-    <div className='card mb-2' style={{ width: 22 + 'rem' }}>
+    <div className='card mb-2'>
       <img
         src={meal.strMealThumb}
         alt={meal.strMeal}
