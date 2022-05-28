@@ -8,7 +8,7 @@ const FavoriteFoodList = ({ favoriteMeals, foodRemove, foodClicked }) => {
   return (
     <div className='container my-4'>
       <div className='d-flex flex-wrap justify-content-lg-center'>
-        {
+        {favoriteMeals ?        
           <>
             {favoriteMeals.map((mealItem) => (
               <FavoriteFoodItem
@@ -19,7 +19,9 @@ const FavoriteFoodList = ({ favoriteMeals, foodRemove, foodClicked }) => {
               />
             ))}
           </>
-        }
+        :
+        <div><h2>Du har inte lagt till några favoritmåltider än.</h2></div>
+      }
       </div>
     </div>
   )
