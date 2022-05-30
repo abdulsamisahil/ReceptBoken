@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-const FoodItem = ({ meal, foodClicked }) => {
+const FoodItem = ({ meal, foodClicked, isItSearch, onDelete }) => {
   return (
     <div className='card mb-2'>
       <img
@@ -22,6 +22,17 @@ const FoodItem = ({ meal, foodClicked }) => {
         >
           Läs mer om maten
         </Link>
+        {!isItSearch && (
+          <button
+            type='button'
+            className='btn btn-danger mx-1'
+            onClick={() => {
+              onDelete(meal.idMeal)
+            }}
+          >
+            Ta bort favorit
+          </button>
+        )}
       </div>
     </div>
   )

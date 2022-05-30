@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import FoodItem from './FoodItem'
 
-const FoodList = ({ meals, foodClicked }) => {
+const FoodList = ({ meals, foodClicked, isSearch, foodRemove }) => {
+  const removeFavorite = (id) => {
+    foodRemove(id)
+  }
+
   return (
     <div className='container'>
       <div className='row'>
@@ -12,7 +16,12 @@ const FoodList = ({ meals, foodClicked }) => {
                 key={meal.idMeal}
                 className={meals.length > 1 ? 'col-sm-6' : 'col-md'}
               >
-                <FoodItem meal={meal} foodClicked={foodClicked} />
+                <FoodItem
+                  isItSearch={isSearch}
+                  meal={meal}
+                  foodClicked={foodClicked}
+                  onDelete={removeFavorite}
+                />
               </div>
             ))}
           </>

@@ -11,10 +11,12 @@ import { getFood } from '../API/getFood'
 const Home = ({ setMealItem }) => {
   const [meals, setMeals] = useState([])
   const [searchValue, setSearchValue] = useState('')
+  const [isSearch, setIsSearch] = useState(false)
 
   const getRecipes = async () => {
     const response = await getFood(searchValue)
     setMeals(response)
+    setIsSearch(true)
   }
 
   /* In this method the user will redirected to the food item page specifically */
@@ -31,7 +33,7 @@ const Home = ({ setMealItem }) => {
         setSearch={setSearchValue}
         requestApi={getRecipes}
       />
-      <FoodList meals={meals} foodClicked={onFoodClicked} />
+      <FoodList isSearch={isSearch} meals={meals} foodClicked={onFoodClicked} />
     </>
   )
 }
