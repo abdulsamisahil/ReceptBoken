@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 /* Components */
 import Footer from './components/Footer'
@@ -24,7 +26,10 @@ const App = () => {
         <Header />
         <Routes>
           <Route path='/' element={<Home setMealItem={setMealItem} />} />
-          <Route path='/my-favorites' element={<MyFavorites setMealItem={setMealItem}/>} />
+          <Route
+            path='/my-favorites'
+            element={<MyFavorites setMealItem={setMealItem} />}
+          />
           <Route
             path='/food-item'
             element={<FoodItemClicked mealItem={mealItem} />}
@@ -33,6 +38,7 @@ const App = () => {
           <Route path='/about' element={<About />} />
         </Routes>
         <Footer />
+        <ToastContainer />
       </Router>
     </>
   )

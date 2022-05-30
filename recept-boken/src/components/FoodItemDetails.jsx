@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom"
-import { useNavigate } from "react-router-dom";
-
+import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 const FoodItemDetails = ({ meal }) => {
   const navigate = useNavigate()
 
@@ -12,6 +11,7 @@ const FoodItemDetails = ({ meal }) => {
 
   let videoLink = `https://www.youtube.com/embed/${vidId}?rel=0`
 
+  console.log(link)
 
   const clickHandler = () => {
     let favoriteMeals = JSON.parse(localStorage.getItem('favorites'))
@@ -25,9 +25,11 @@ const FoodItemDetails = ({ meal }) => {
         meal,
       })
       localStorage.setItem('favorites', JSON.stringify(favoriteMeals))
-      alert(meal.strMeal + ' lades till dina favoritmåltid!')
-    } else {
       navigate('/my-favorites')
+      toast.success('Favoriten har lagts till i listan')
+      // alert(meal.strMeal + ' lades till dina favoritmåltid!')
+    } else {
+      toast.error('Favoriten finns redan med i listan!')
     }
   }
 
