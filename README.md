@@ -1,63 +1,57 @@
 # ReceptBoken
 
 ### How to run
+
 First from the root run:
+
 ```
  cd recept-boken
 ```
 
 Then from recept-boken run:
+
 ```
  npm install
 ```
 
 After running the above commands, when it is finished, from recept-boken run:
+
 ```
  npm start
 ```
 
 By running the above command, ReceptBoken Application will run in a web browser, enjoy browsing it!
 
-
 ### About the project
-It should be easy to cook good food, we have always thought so.
-Whether you are looking for a quick lunch dish or a festive fine dinner. Whether you are craving a homemade classic or the latest trend food. Both as inspiration for summer barbecue evenings and a winter dinner with candles.
 
-At ReceptBoken you will find lots of exciting dishes that suit all occasions.
-A good recipe for good food, quite simply.
-
+It is a cross-platform web application developed to assist users find food and bakery recipes. The user can get all the recipes that are included in Themealdb.com database.
 
 ### Features
-- Search results open on a new page.
-- Each search result opens a new page with ingredients for the selected search element.
-- Save meals to your favorites list, even when you close your browser. Nothing will be lost until you delete them by yourself.
-- Delete saved meals from favorites.
-- A media player under each recipe.
-- A responsive user interface that suits any browser or device.
+
+The user of the application gets equipped with a recipe for a quick lunch dish or a festive fine dinner. Whether he/she is craving a homemade classic or the latest trend food. Both as inspiration for summer barbecue evenings and a winter dinner with candles.
+
+Together with recipe instructions and ingredients, the user can also see the video instructions of each particular recipe. He/she see the video by clicking on the "Läs mer matten" button. In addition to that, if the user feels that it is a good recipe, he/she can then add it to the favorite list that will get stored in the local storage of the used web browser. The user can also wipe out the recipe from the list.
+
+The user can not add a recipe to the favorites if it already exists there.
 
 ### The used API
-We used:
-- TheMealDB.com. It is an open, crowd-sourced database of Recipes from around the world. 
-- Youtube data API.
 
+We used:
+
+- TheMealDB.com. It is an open, crowd-sourced database of Recipes from around the world.
 
 # Framework/Library choice
-We use React to develop this project.
+
+We use React to develop this project and used Bootstrap 5 as the CSS framework to make it responsive for all devices such as desktops, tablets and mobiles. In addition to bootstrap, we have added a little bit custom css as well to limit the size of lines from the recipe instruction's property showing in cards after the search result and cards in the favorites list.
 
 ### Why React, not Vue or Angular?
-- All of us already can React.
-- Everyone in the team is loaded with other courses, projects, deadlines ...etc, so we had no time to learn new things from the scratch.
-- React is the most popular library in JavaScript.
 
-### Comparison of React, Angular, and Vue
-- Creator: React was created by Jordan Walke in 2011, Angular by Google in 2016 (AngularJS: 2010 by Misko Hevery ) then lastly Vue which was created by Evan You in 2014.
+There can be multiple reasons why the team chose React instead of Vue or Angular, here are some of the reasons:
 
-- Type: React is a JavaScript library, while Angular is a web application framework. Vue is a JavaScript framework.
+Firstly and most importantly, the biggest reason was that we had different kinds of projects and assignments at the same time. Since we had extreme workload in other courses, and our team had experiences in React from previously project and courses, we thought it is best to use React though we would not manage to learn Vue and Angular in a limited time.
 
-- Performance: All 3 frameworks/libraries have great performance, no core differences between them.
+Secondly, React is better than Vue or Angular because of its interesting virtual DOM abilities, it has easy-to-follow documentation, it has large community support, it consists of light weight attributes and so on so forth these are the features that has made React the most popular frontend framework of JavaScript.
 
-- Support: React is supported by Meta(Facebook) and the community while Angular is supported by Google, Vue is supported by its large community.
+However, it would be nice and great if we could have used Vue and Angular in order to expand the knowledge about more frameworks and libraries. We can briefly say that we do not limit our knowledge to a certain framework but it is our next goal to start using Vue first and then Angular in our coming projects.
 
-- Companies using it: React is used by Netflix, Twitter and Shopify. Angular is used by Samsung, Forbes, Upwork and Paypal. Vue is used by Gitlab, Alibaba, Grammarly and Baidu.
-
-
+Download the repository and follow the earlier mentioned steps and enjoy diverse recipes. Good Luck!
