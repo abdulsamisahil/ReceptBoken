@@ -15,22 +15,22 @@ const FoodItem = ({ meal, foodClicked, isItSearch, onDelete }) => {
         </p>
         <Link
           to='/food-item'
-          className='btn btn-warning'
+          className='btn btn-warning m-1'
           onClick={() => {
             foodClicked(meal)
           }}
         >
-          Läs mer om maten
+          Läs mer om recept
         </Link>
         {!isItSearch && (
           <button
             type='button'
-            className='btn btn-danger mx-1'
+            className='btn btn-danger m-1'
             onClick={() => {
               onDelete(meal.idMeal)
             }}
           >
-            Ta bort favorit
+            Ta bort favoritrecept
           </button>
         )}
       </div>
