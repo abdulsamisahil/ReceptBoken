@@ -34,7 +34,7 @@ We used:
 - TheMealDB.com. It is an open, crowd-sourced database of Recipes from around the world.
 
 # Framework/Library choice
-We use React to develop this project.
+We use React to develop this project and used Bootstrap 5 as the CSS framework to make it responsive for all devices such as desktops, tablets and mobiles. In addition to bootstrap, we have added a little bit custom css as well to limit the size of lines from the recipe instruction's property showing in cards after the search result and cards in the favorites list. 
 
 ### Why React, not Vue or Angular?
 
