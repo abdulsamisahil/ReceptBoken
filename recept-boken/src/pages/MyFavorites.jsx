@@ -24,8 +24,6 @@ const MyFavorites = ({ setMealItem }) => {
 
     meals = meals.filter((m) => m.idMeal !== mealId)
 
-    console.log(meals)
-
     localStorage.setItem('favorites', JSON.stringify(meals))
     setFavoriteMeals(meals)
   }

@@ -8,7 +8,7 @@ const FoodList = ({ meals, foodClicked, isSearch, foodRemove }) => {
 
   return (
     <div className='container my-4'>
-      <div className='d-flex flex-wrap'>
+      <div className='d-flex flex-wrap justify-content-center'>
         {meals ?
           <>
             {meals.map((meal) => (
@@ -26,7 +26,7 @@ const FoodList = ({ meals, foodClicked, isSearch, foodRemove }) => {
             ))}
           </>
           :
-          <h2>Inga måltider hittades</h2>
+          <h2>Inga måltider hittades.</h2>
         }
 
       </div>
