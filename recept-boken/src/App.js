@@ -1,4 +1,7 @@
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import React, { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 /* Components */
 import Footer from './components/Footer'
@@ -12,6 +15,9 @@ import Contact from './pages/Contact'
 import About from './pages/About'
 
 const App = () => {
+  const [mealItem, setMealItem] = useState({})
+
+  //console.log(mealsDetail) */
 
   return (
     <>
@@ -19,13 +25,20 @@ const App = () => {
         {/* Bring Routes and Route that will be later used to route contact and my favorite meals pages next time */}
         <Header />
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/my-favorites' element={<MyFavorites />} />
-          <Route path='/food-item' element={<FoodItemClicked />} />
+          <Route path='/' element={<Home setMealItem={setMealItem} />} />
+          <Route
+            path='/my-favorites'
+            element={<MyFavorites setMealItem={setMealItem} />}
+          />
+          <Route
+            path='/food-item'
+            element={<FoodItemClicked mealItem={mealItem} />}
+          />
           <Route path='/contact' element={<Contact />} />
-          <Route path='/about' element={<About />} /> 
+          <Route path='/about' element={<About />} />
         </Routes>
         <Footer />
+        <ToastContainer />
       </Router>
     </>
   )

@@ -21,7 +21,7 @@ const SearchRecipe = ({ setSearch, requestApi, value, meals }) => {
       <section className='text-dark p-4'>
         <div className='container'>
           <div className='d-md-flex align-items-center justify-content-between'>
-            <h3 className='mb-3 mb-md-0'>Sök för recept</h3>
+            <h3 className='mb-3 mb-md-0'>Sök efter recept</h3>
             <div className='input-group'>
               <input
                 type='text'

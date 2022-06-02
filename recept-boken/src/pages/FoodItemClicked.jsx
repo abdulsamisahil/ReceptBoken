@@ -1,10 +1,11 @@
-const FoodItemClicked = () => {
+import FoodItemDetails from '../components/FoodItemDetails'
 
-    return (
-        <div className="container" >
-            Food Item Clicked Page
-        </div>
-    )
+const FoodItemClicked = ({ mealItem }) => {
+  return (
+    <div className='container'>
+      <FoodItemDetails meal={mealItem} />
+    </div>
+  )
 }
 
 export default FoodItemClicked
