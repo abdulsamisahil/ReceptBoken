@@ -8,13 +8,13 @@ const FoodList = ({ meals, foodClicked, isSearch, foodRemove }) => {
 
   return (
     <div className='container my-4'>
-      <div className='d-flex flex-wrap justify-content-center'>
+      <div className='row'>
         {meals ?
           <>
             {meals.map((meal) => (
               <div
                 key={meal.idMeal}
-                className='col-lg-4 col-md-6'
+                className={meals.length > 1 ? 'col-lg-4 col-md-6' : 'col'}
               >
                 <FoodItem
                   isItSearch={isSearch}
