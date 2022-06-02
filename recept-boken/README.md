@@ -1,70 +1,49 @@
-# ReceptBoken flerplattformsapplikation
+# ReceptBoken
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### How to run
+First from the root run:
+```
+ cd recept-boken
+```
 
-## Available Scripts
+Then from recept-boken run:
+```
+ npm install
+```
 
-In the project directory, you can run:
+After running the above commands, when it is finished, from recept-boken run:
+```
+ npm start
+```
 
-### `npm start`
+By running the above command, ReceptBoken Application will run in a web browser, enjoy browsing it!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### About the project
+It is a cross-platform web application developed to assist users find food and bakery recipes. The user can get all the recipes that are included in Themealdb.com database. 
 
-### `npm test`
+### Features
+The user of the application gets equipped with a recipe for a quick lunch dish or a festive fine dinner. Whether he/she is craving a homemade classic or the latest trend food. Both as inspiration for summer barbecue evenings and a winter dinner with candles.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Together with recipe instructions and ingredients, the user can also see the video instructions of each particular recipe. He/she see the video by clicking on the "Läs mer matten" button. In addition to that, if the user feels that it is a good recipe, he/she can then add it to the favorite list that will get stored in the local storage of the used web browser. The user can also wipe out the recipe from the list. 
 
-### `npm run build`
+The user can not add a recipe to the favorites if it already exists there. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### The used API
+We used:
+- TheMealDB.com. It is an open, crowd-sourced database of Recipes from around the world.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Framework/Library choice
+We use React to develop this project.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Why React, not Vue or Angular?
 
-### `npm run eject`
+There can be multiple reasons why the team chose React instead of Vue or Angular, here are some of the reasons: 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Firstly and most importantly, the biggest reason was that we had different kinds of projects and assignments at the same time. Since we had extreme workload in other courses, and our team had experiences in React from previously project and courses, we thought it is best to use React though we would not manage to learn Vue and Angular in a limited time. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Secondly, React is better than Vue or Angular because of its interesting virtual DOM abilities, it has easy-to-follow documentation, it has large community support, it consists of light weight attributes and so on so forth these are the features that has made React the most popular frontend framework of JavaScript.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+However, it would be nice and great if we could have used Vue and Angular in order to expand the knowledge about more frameworks and libraries. We can briefly say that we do not limit our knowledge to a certain framework but it is our next goal to start using Vue first and then Angular in our coming projects.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Download the repository and follow the earlier mentioned steps and enjoy diverse recipes. Good Luck!
