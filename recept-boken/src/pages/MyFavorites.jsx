@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import FavoriteFoodList from '../components/FavoriteFoodList'
+import FoodList from '../components/FoodList'
 
 const MyFavorites = ({ setMealItem }) => {
   const [favoriteMeals, setFavoriteMeals] = useState([])
@@ -10,17 +10,21 @@ const MyFavorites = ({ setMealItem }) => {
 
   const loadMeals = () => {
     let foodList = localStorage.getItem('favorites')
-    return JSON.parse(foodList)
+    let JsonFoodList = JSON.parse(foodList)
+
+    return JsonFoodList
   }
 
   useEffect(() => {
     setFavoriteMeals(loadMeals)
   }, [])
 
-  const onFoodRemove = (meal) => {
+  const onFoodRemove = (mealId) => {
     let meals = loadMeals()
 
-    meals = meals.filter((m) => m.meal.idMeal !== meal)
+    meals = meals.filter((m) => m.idMeal !== mealId)
+
+    console.log(meals)
 
     localStorage.setItem('favorites', JSON.stringify(meals))
     setFavoriteMeals(meals)
@@ -31,8 +35,9 @@ const MyFavorites = ({ setMealItem }) => {
       <div className='div' align='center'>
         <h2>Mina Favoritrecept</h2>
       </div>
-      <FavoriteFoodList
-        favoriteMeals={favoriteMeals}
+      <FoodList
+        isSearch={false}
+        meals={favoriteMeals}
         foodClicked={onFoodClicked}
         foodRemove={onFoodRemove}
       />

@@ -20,14 +20,11 @@ const FoodItemDetails = ({ meal }) => {
       favoriteMeals = []
     }
 
-    if (!favoriteMeals.some((m) => m.meal.idMeal === meal.idMeal)) {
-      favoriteMeals.push({
-        meal,
-      })
+    if (!favoriteMeals.some((m) => m.idMeal === meal.idMeal)) {
+      favoriteMeals.push(meal)
       localStorage.setItem('favorites', JSON.stringify(favoriteMeals))
       navigate('/my-favorites')
       toast.success('Favoriten har lagts till i listan')
-      // alert(meal.strMeal + ' lades till dina favoritmåltid!')
     } else {
       toast.error('Favoriten finns redan med i listan!')
     }

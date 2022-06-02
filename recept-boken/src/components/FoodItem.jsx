@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 const FoodItem = ({ meal, foodClicked, isItSearch, onDelete }) => {
   return (
-    <div className='card mb-2'>
+    <div className='card mb-2 mx-2'>
       <img
         src={meal.strMealThumb}
         alt={meal.strMeal}

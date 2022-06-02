@@ -7,14 +7,14 @@ const FoodList = ({ meals, foodClicked, isSearch, foodRemove }) => {
   }
 
   return (
-    <div className='container'>
-      <div className='row'>
-        {
+    <div className='container my-4'>
+      <div className='d-flex flex-wrap'>
+        {meals ?
           <>
             {meals.map((meal) => (
               <div
                 key={meal.idMeal}
-                className={meals.length > 1 ? 'col-sm-6' : 'col-md'}
+                className='col-lg-4 col-md-6'
               >
                 <FoodItem
                   isItSearch={isSearch}
@@ -25,7 +25,10 @@ const FoodList = ({ meals, foodClicked, isSearch, foodRemove }) => {
               </div>
             ))}
           </>
+          :
+          <h2>Inga måltider hittades</h2>
         }
+
       </div>
     </div>
   )
